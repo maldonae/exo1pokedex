@@ -13,10 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-p,
+/* p,
 figcaption {
   color: rgb(156, 154, 154);
-}
+} */
 
 img {
   width: 25em;
