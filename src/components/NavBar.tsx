@@ -12,15 +12,23 @@ interface NavBarProps {
 function NavBar({ pokemonIndex, setPokemonIndex, pokemonList }: NavBarProps) {
   const incremente = () => {
     if (pokemonIndex < pokemonList.length - 1) {
-      setPokemonIndex(pokemonIndex + 1);
-    }
-  };
-  const decremente = () => {
-    if (pokemonIndex > 0) {
-      setPokemonIndex(pokemonIndex - 1);
+      const newIndex = pokemonIndex + 1;
+      setPokemonIndex(newIndex);
+      if (pokemonList[newIndex]?.name === "pikachu") {
+        alert("pika pikachu !!!");
+      }
     }
   };
 
+  const decremente = () => {
+    if (pokemonIndex > 0) {
+      const newIndex = pokemonIndex - 1;
+      setPokemonIndex(newIndex);
+      if (pokemonList[newIndex]?.name === "pikachu") {
+        alert("pika pikachu !!!");
+      }
+    }
+  };
   return (
     <div>
       <button type="button" onClick={decremente}>
