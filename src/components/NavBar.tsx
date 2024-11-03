@@ -7,6 +7,7 @@ interface NavBarProps {
   pokemonIndex: number;
   setPokemonIndex: (index: number) => void;
   pokemonList: Pokemon[];
+  key: string;
 }
 
 function NavBar({ pokemonIndex, setPokemonIndex, pokemonList }: NavBarProps) {
@@ -23,12 +24,14 @@ function NavBar({ pokemonIndex, setPokemonIndex, pokemonList }: NavBarProps) {
 
   return (
     <div>
+      {/* <nav>
       <button type="button" onClick={decremente}>
         Précédent
       </button>
       <button type="button" onClick={incremente}>
         Suivant
       </button>
+      </nav> */}
     </div>
   );
 }
